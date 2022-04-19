@@ -1,12 +1,14 @@
+import styled from 'styled-components'
 
+const AppStyle = styled.div`
+  
+`
 
 function App() {
-
   return (
-    <div className="App">
-      
-    </div>
+    <AppStyle>
+      <h1>Styled</h1>
+    </AppStyle>
   )
 }
-
 export default App
