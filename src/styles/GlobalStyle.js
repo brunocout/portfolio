@@ -7,12 +7,12 @@ const GlobalStyle = createGlobalStyle`
     :root {
         /* Base Colors */
         --primary-color: #150050;
-        --segundary-color: #3F0071;
+        --secondary-color: #3F0071;
         --tertary-color: #610094;
         /* System Colors */
         --background-color: #10121A;
         --text-color: #EEEEEE;
-        --shadow-color: rgba(0, 0, 0.1); 
+        --shadow-color: rgba(0, 0, 0.1);
     }
 
     * {
