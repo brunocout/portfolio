@@ -11,7 +11,6 @@ const StyledHeader = styled.div`
     height: 3rem;
 
     .navbar {
-        padding: 1rem;
         max-width: 300px;
     }
 
