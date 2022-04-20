@@ -19,7 +19,9 @@ const StyledHeader = styled.div`
     }
 
     .logo {
+        font-family: 'Abril Fatface', cursive;
         cursor: pointer;
+        font-size: 1rem;
     }
     
 
@@ -27,9 +29,6 @@ const StyledHeader = styled.div`
         color: var(--tertary-color);
     }
 
-    h1 {
-        font-size: 1.8rem;
-    }
 `
 
 function Header() {
@@ -37,7 +36,7 @@ function Header() {
         <StyledHeader>
 
             <div className="logo">
-                <h1>bruno <span>cout</span></h1>
+                <h1>bruno <span>cout</span>.</h1>
             </div>
             
             <div className='navbar'>

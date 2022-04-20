@@ -10,13 +10,43 @@ const StyledIntroducing = styled.div`
     align-items: center;
 
     .banner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 400px;
+        height: 400px;
         min-width: 300px;
     }
 
-    .banner img {
-        max-width: 100%;
+    .profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid var(--tertary-color);
         border-radius: 50%;
+        width: 370px;
+        height: 370px;
+    }
+
+    .profile > img {
+        max-width: 95%;
+        border-radius: 50%;
+    }
+
+    .stacks {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        -webkit-animation: rotating 15s linear infinite;
+        -moz-animation: rotating 15s linear infinite;
+        -ms-animation: rotating 15s linear infinite;
+        -o-animation: rotating 15s linear infinite;
+        animation: rotating 15s linear infinite;
     }
 
     .introducing {
@@ -32,6 +62,23 @@ const StyledIntroducing = styled.div`
         color: var(--tertary-color);
         font-size: 1rem;
     }
+
+    @keyframes rotating {
+        from {
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        to {
+            -ms-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
     
 `;
 
@@ -46,7 +93,10 @@ function Introducing() {
                 <Button type={"btn-cv"}>Download CV</Button>
             </div>
             <div className="banner">
-                <img src="./src/assets/images/banner.png"/>
+                <img className='stacks' src="./src/assets/images/stacks.png"/>
+                <div className="profile">
+                    <img src="./src/assets/images/banner.png"/>
+                </div>
             </div>
         </StyledIntroducing>
      );
