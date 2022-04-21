@@ -13,16 +13,43 @@ const StyledButton = styled.button`
       color: var(--tertary-color);
   }
 
-  ${({ type }) => type === "btn-cv" && css`
+  ${({ type }) => type === "contact" && css`
   
     background-color: var(--tertary-color);
-    margin-top: 20px;
     padding: 1rem;
     border-radius: 3px;
 
     &:hover {
       background-color: #600094d2;
       color: #ffffff91;
+    }
+
+  `}
+
+  ${({ type }) => type === "cv" && css`
+
+    position: relative;
+    margin: 20px;
+    border-bottom: 2px solid var(--tertary-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--animation-button-color);
+      transition: 300ms ease-in-out;
+    }
+
+    &:hover {
+      color: var(--text-color);
+    }
+
+    &:hover::before {
+      width: 100%;
+      
     }
 
   `}

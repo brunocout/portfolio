@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
         --background-color: #10121A;
         --text-color: #EEEEEE;
         --shadow-color: rgba(0, 0, 0.1);
+        --animation-button-color: #daa520d1;
     }
 
     * {

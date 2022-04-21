@@ -15,23 +15,12 @@ const StyledIntroducing = styled.div`
         justify-content: center;
         align-items: center;
         width: 400px;
-        height: 400px;
         min-width: 300px;
     }
 
     .profile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 5px solid var(--tertary-color);
         border-radius: 50%;
-        width: 370px;
-        height: 370px;
-    }
-
-    .profile > img {
-        max-width: 95%;
-        border-radius: 50%;
+        max-width: 85%;
     }
 
     .stacks {
@@ -90,13 +79,12 @@ function Introducing() {
                 <span>-- Introducing</span>
                 <h1>Hello I'm Bruno Coutinho</h1>
                 <p>Systems analyst student, passionate about development and technology.</p>
-                <Button type={"btn-cv"}>Download CV</Button>
+                <Button type={"contact"}>Contact Me</Button>
+                <Button type={"cv"}>Download CV</Button>
             </div>
             <div className="banner">
                 <img className='stacks' src="./src/assets/images/stacks.png"/>
-                <div className="profile">
-                    <img src="./src/assets/images/banner.png"/>
-                </div>
+                <img className="profile" src="./src/assets/images/banner.png"/>
             </div>
         </StyledIntroducing>
      );
