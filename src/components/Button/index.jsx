@@ -14,7 +14,6 @@ const StyledButton = styled.button`
   }
 
   ${({ type }) => type === "contact" && css`
-  
     background-color: var(--primary-color);
     padding: 1rem;
     border-radius: 3px;
@@ -27,7 +26,7 @@ const StyledButton = styled.button`
   `}
 
   ${({ type }) => type === "cv" && css`
-
+    
     position: relative;
     margin: 20px;
     border-bottom: 2px solid var(--primary-color);
@@ -53,10 +52,39 @@ const StyledButton = styled.button`
     }
 
   `}
+
+  ${({ type }) => type === "nav-link" && css`
+    position: relative;
+    opacity: 0.5;
+    margin-left: 1.8rem;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary-color);
+      opacity: 0;
+      transition: 300ms ease-in-out;
+    }
+
+    &:hover {
+      color: var(--text-color);
+      opacity: 1;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      width: 100%;
+    }
+
+  `}
 `;
 
-function Button({ children, type, ...props }) {
-  return <StyledButton type={type} {...props}>{children}</StyledButton>
+function Button({ children, type, component = 'button',...props }) {
+  return <StyledButton as={component} type={type} {...props}>{children}</StyledButton>
 }
 
 export default Button

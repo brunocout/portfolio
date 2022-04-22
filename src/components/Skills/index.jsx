@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const StyledSkills = styled.div`
     position: absolute;
     background-color: var(--skills-bg-color);
-    width: 100vw;
+    width: 100%;
+    height: 1000px;
     left: 0;
 
     span {

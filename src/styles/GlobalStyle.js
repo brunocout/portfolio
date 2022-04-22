@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
         --tertary-color: #b121be;
         /* System Colors */
         --background-color: #10121A;
+        --transparent-bg-color: #10121A;
         --skills-bg-color: #1a1f30;
         --text-color: #EEEEEE;
         --shadow-color: rgba(0, 0, 0.1);

@@ -8,6 +8,7 @@ const StyledIntroducing = styled.div`
     justify-content: space-between;
     padding: 150px 100px 150px 100px;
     align-items: center;
+    font-size: 1rem;
 
     .banner {
         position: relative;
@@ -53,6 +54,11 @@ const StyledIntroducing = styled.div`
         font-size: 1rem;
     }
 
+    .buttons-container {
+        font-size: 1.2rem;
+        margin-top: 25px;
+    }
+
     @keyframes rotating {
         from {
             -ms-transform: rotate(0deg);
@@ -80,8 +86,10 @@ function Introducing() {
                 <span>-- Introducing</span>
                 <h1>Hello I'm Bruno Coutinho</h1>
                 <p>Systems analyst student, passionate about development and technology.</p>
-                <Button type="contact" onClick={() => location.href = "mailto:iambrunocout@gmail.com"}>Contact Me</Button>
-                <Button type="cv" onClick={() => location.href = "./src/assets/files/Bruno_CV.pdf"}>Download CV</Button>
+                <div className="buttons-container">
+                    <Button type="contact" component="a" href="mailto:iambrunocout@gmail.com" target="_blank">Contact Me</Button>
+                    <Button type="cv" component="a" href="./src/assets/files/Bruno_CV.pdf" target="_blank">Download CV</Button>
+                </div>
             </div>
             <div className="banner">
                 <img className='stacks' src="./src/assets/images/stacks.png"/>
