@@ -2,12 +2,17 @@ import styled from 'styled-components';
 
 const StyledSkills = styled.div`
     position: absolute;
-    background-color: #1a1f30;
+    background-color: var(--skills-bg-color);
     width: 100vw;
     left: 0;
 
     span {
-        color: var(--tertary-color);
+        color: var(--primary-color);
+    }
+
+    .container {
+        margin: auto;
+        max-width: 1120px;
     }
 
 `;
@@ -15,8 +20,10 @@ const StyledSkills = styled.div`
 function Skills() {
     return ( 
         <StyledSkills>
-            <span>--skills</span>
-            
+            <div className='container'>
+                <span>--skills</span>
+                
+            </div>
         </StyledSkills>
      );
 }

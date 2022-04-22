@@ -6,14 +6,16 @@ const GlobalStyle = createGlobalStyle`
 
     :root {
         /* Base Colors */
-        --primary-color: #150050;
+        --primary-color: #610094;
         --secondary-color: #3F0071;
-        --tertary-color: #610094;
+        --tertary-color: #b121be;
         /* System Colors */
         --background-color: #10121A;
+        --skills-bg-color: #1a1f30;
         --text-color: #EEEEEE;
         --shadow-color: rgba(0, 0, 0.1);
         --animation-button-color: #daa520d1;
+        --a-second-color: #1cfefc;
     }
 
     * {

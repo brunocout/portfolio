@@ -26,7 +26,7 @@ const StyledHeader = styled.div`
     
 
     span {
-        color: var(--tertary-color);
+        color: var(--primary-color);
     }
 
 `
@@ -34,7 +34,6 @@ const StyledHeader = styled.div`
 function Header() {
     return (
         <StyledHeader>
-
             <div className="logo">
                 <h1>bruno <span>cout</span>.</h1>
             </div>

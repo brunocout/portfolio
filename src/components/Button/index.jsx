@@ -10,18 +10,18 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   &:hover {
-      color: var(--tertary-color);
+      color: var(--primary-color);
   }
 
   ${({ type }) => type === "contact" && css`
   
-    background-color: var(--tertary-color);
+    background-color: var(--primary-color);
     padding: 1rem;
     border-radius: 3px;
 
     &:hover {
-      background-color: #600094d2;
-      color: #ffffff91;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
     }
 
   `}
@@ -30,7 +30,7 @@ const StyledButton = styled.button`
 
     position: relative;
     margin: 20px;
-    border-bottom: 2px solid var(--tertary-color);
+    border-bottom: 2px solid var(--primary-color);
 
     &::before {
       content: "";
@@ -53,11 +53,10 @@ const StyledButton = styled.button`
     }
 
   `}
-
 `;
 
-function Button({ children, type}) {
-    return <StyledButton type={type}>{children}</StyledButton>
+function Button({ children, type, ...props }) {
+  return <StyledButton type={type} {...props}>{children}</StyledButton>
 }
 
 export default Button

@@ -16,6 +16,7 @@ const StyledIntroducing = styled.div`
         align-items: center;
         width: 400px;
         min-width: 300px;
+        cursor: pointer;
     }
 
     .profile {
@@ -48,7 +49,7 @@ const StyledIntroducing = styled.div`
     }
 
     .introducing span {
-        color: var(--tertary-color);
+        color: var(--primary-color);
         font-size: 1rem;
     }
 
@@ -79,8 +80,8 @@ function Introducing() {
                 <span>-- Introducing</span>
                 <h1>Hello I'm Bruno Coutinho</h1>
                 <p>Systems analyst student, passionate about development and technology.</p>
-                <Button type={"contact"}>Contact Me</Button>
-                <Button type={"cv"}>Download CV</Button>
+                <Button type="contact" onClick={() => location.href = "mailto:iambrunocout@gmail.com"}>Contact Me</Button>
+                <Button type="cv" onClick={() => location.href = "./src/assets/files/Bruno_CV.pdf"}>Download CV</Button>
             </div>
             <div className="banner">
                 <img className='stacks' src="./src/assets/images/stacks.png"/>
