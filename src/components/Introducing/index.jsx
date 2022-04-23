@@ -1,5 +1,22 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Button from '../Button';
+
+const rotating = keyframes`
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+`
 
 const StyledIntroducing = styled.div`
 
@@ -33,11 +50,11 @@ const StyledIntroducing = styled.div`
         bottom: 0;
         margin: auto;
         width: 100%;
-        -webkit-animation: rotating 15s linear infinite;
-        -moz-animation: rotating 15s linear infinite;
-        -ms-animation: rotating 15s linear infinite;
-        -o-animation: rotating 15s linear infinite;
-        animation: rotating 15s linear infinite;
+        -webkit-animation: ${rotating} 60s linear infinite;
+        -moz-animation: ${rotating} 60s linear infinite;
+        -ms-animation: ${rotating} 60s linear infinite;
+        -o-animation: ${rotating} 60s linear infinite;
+        animation: ${rotating} 60s linear infinite;
     }
 
     .introducing {
@@ -57,23 +74,6 @@ const StyledIntroducing = styled.div`
     .buttons-container {
         font-size: 1.2rem;
         margin-top: 25px;
-    }
-
-    @keyframes rotating {
-        from {
-            -ms-transform: rotate(0deg);
-            -moz-transform: rotate(0deg);
-            -webkit-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
-        to {
-            -ms-transform: rotate(360deg);
-            -moz-transform: rotate(360deg);
-            -webkit-transform: rotate(360deg);
-            -o-transform: rotate(360deg);
-            transform: rotate(360deg);
-        }
     }
     
 `;
