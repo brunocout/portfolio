@@ -129,7 +129,7 @@ const StyledIntroducing = styled.div`
 `;
 
 
-function Introducing() {
+function Introduction() {
     return ( 
         <StyledIntroducing>
             <div className="introducing">
@@ -149,4 +149,4 @@ function Introducing() {
      );
 }
  
-export default Introducing;
+export default Introduction;

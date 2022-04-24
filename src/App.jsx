@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import Header from './components/Header'
-import Introducing from './components/Introducing';
+import Introduction from './components/Introduction';
 import Skills from './components/Skills';
 
 const Container = styled.div`
@@ -18,7 +18,7 @@ function App() {
     <div className="app">
       <Container>
           <Header />
-          <Introducing />
+          <Introduction />
           <Skills/>
       </Container>
     </div>
