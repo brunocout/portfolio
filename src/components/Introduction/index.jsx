@@ -1,47 +1,19 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import { fadeInUp, rotating, typewriter, blink } from '../../styles/Animations';
+
+
 import Button from '../Button';
 
-const rotating = keyframes`
-    from {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-`
-
-const typewriter = keyframes`
-    to {
-        left: 100%;
-    }
-`
-
-const blink = keyframes`
-    to {
-        opacity: 0;
-    }
-    from {
-        opacity: 1;
-    }
-
-`
-
 const StyledIntroducing = styled.div`
-
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 150px 100px 150px 100px;
     align-items: center;
     font-size: 1rem;
+    opacity: 0;
+    transform: translateY(-3rem);
+    animation: ${fadeInUp} 2s ease 250ms forwards;
 
     .banner {
         position: relative;
@@ -101,18 +73,13 @@ const StyledIntroducing = styled.div`
 
     .title::before {
         background-color: var(--background-color);
-        animation: ${typewriter} 1s steps(19) forwards;
+        animation: ${typewriter} 1s steps(19) 350ms forwards;
     }
 
     .title::after {
         width: 1px;
         background-color: var(--text-color);
-        animation: ${typewriter} 1s steps(19) forwards, ${blink} 750ms steps(19) infinite;
-    }
-
-    .introducing span {
-        color: var(--primary-color);
-        font-size: 1rem;
+        animation: ${typewriter} 1s steps(19) 350ms forwards, ${blink} 1s steps(19) 350ms infinite;
     }
 
     .buttons-container {

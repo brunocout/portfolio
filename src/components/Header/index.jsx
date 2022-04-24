@@ -8,6 +8,9 @@ const StyledHeader = styled.div`
     left: 0;
     transition: .3s;
     z-index: 1;
+    padding: 1rem;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     background-color: ${props => props.scrolled.background};
     box-shadow: ${props => props.scrolled.boxShadow};
     padding: ${props => props.scrolled.padding};
@@ -20,7 +23,6 @@ const StyledHeader = styled.div`
         align-items: center;
         max-width: 1320px;
         width: 100%;
-        padding: 2rem;
         height: 3rem;
     }
 
@@ -55,9 +57,9 @@ function Header() {
     window.addEventListener('scroll', handleScroll)
 
     const scrolled = {
-        background: '#00000060',
+        background: '#00000070',
         boxShadow: '0 5px 20px 0.1px rgba(0, 0, 0, 0.1)',
-        padding: '1rem'
+        padding: '1.5rem'
     }
 
     return (
