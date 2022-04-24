@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Button from '../Button';
 
@@ -10,6 +10,8 @@ const StyledHeader = styled.div`
     z-index: 1;
     background-color: ${props => props.scrolled.background};
     box-shadow: ${props => props.scrolled.boxShadow};
+    padding: ${props => props.scrolled.padding};
+    transition: all 500ms ease-in-out;
 
     .navbar-container {
         margin: auto;
@@ -40,27 +42,26 @@ const StyledHeader = styled.div`
 
 function Header() {
 
-    const [show, setShow] = useState(true)
+    const [show, setShow] = useState(false)
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
-            setShow(false)
-        } else {
             setShow(true)
+        } else {
+            setShow(false)
         }
     }
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-    }, [])
+    window.addEventListener('scroll', handleScroll)
 
     const scrolled = {
-        background: '#20003aaf',
-        boxShadow: '0 5px 20px 0.1px rgba(0, 0, 0, 0.1)'
+        background: '#00000060',
+        boxShadow: '0 5px 20px 0.1px rgba(0, 0, 0, 0.1)',
+        padding: '1rem'
     }
 
     return (
-        <StyledHeader scrolled={!show && scrolled}>
+        <StyledHeader scrolled={show && scrolled}>
             <div className="navbar-container">
                 <div className="logo">
                     <h1>bruno <span>cout</span>.</h1>

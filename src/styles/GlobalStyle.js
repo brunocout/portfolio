@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
         --transparent-bg-color: #10121A;
         --skills-bg-color: #1a1f30;
         --text-color: #EEEEEE;
+        --opacity-text-color: #ffffffbc;
         --shadow-color: rgba(0, 0, 0.1);
         --animation-button-color: #daa520d1;
         --a-second-color: #1cfefc;

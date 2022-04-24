@@ -18,6 +18,22 @@ const rotating = keyframes`
     }
 `
 
+const typewriter = keyframes`
+    to {
+        left: 100%;
+    }
+`
+
+const blink = keyframes`
+    to {
+        opacity: 0;
+    }
+    from {
+        opacity: 1;
+    }
+
+`
+
 const StyledIntroducing = styled.div`
 
     display: flex;
@@ -62,8 +78,36 @@ const StyledIntroducing = styled.div`
         font-size: 1.8rem;
     }
 
-    .introducing h1 {
-        font-size: 5rem;
+    .title {
+        position: relative;
+        font-size: 3.5rem;
+    }
+
+    .title::before,
+    .title::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    p {
+        font-size: 1.1rem;
+        width: 70%;
+        color: var(--opacity-text-color);
+    }
+
+    .title::before {
+        background-color: var(--background-color);
+        animation: ${typewriter} 1s steps(19) forwards;
+    }
+
+    .title::after {
+        width: 1px;
+        background-color: var(--text-color);
+        animation: ${typewriter} 1s steps(19) forwards, ${blink} 750ms steps(19) infinite;
     }
 
     .introducing span {
@@ -75,6 +119,12 @@ const StyledIntroducing = styled.div`
         font-size: 1.2rem;
         margin-top: 25px;
     }
+
+    .developer {
+        font-size: 1.5rem;
+        padding: 10px;
+        border-left: 2px solid var(--primary-color);
+    }
     
 `;
 
@@ -83,8 +133,8 @@ function Introducing() {
     return ( 
         <StyledIntroducing>
             <div className="introducing">
-                <span>-- Introducing</span>
-                <h1>Hello I'm Bruno Coutinho</h1>
+                <h1 className='developer'>Front-End Developer</h1>
+                <h2 className='title'>Hello I'm Bruno Coutinho</h2>
                 <p>Systems analyst student, passionate about development and technology.</p>
                 <div className="buttons-container">
                     <Button type="contact" component="a" href="mailto:iambrunocout@gmail.com" target="_blank">Contact Me</Button>
