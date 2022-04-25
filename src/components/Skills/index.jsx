@@ -1,3 +1,4 @@
+import Card from '../Card'
 import styled from 'styled-components';
 
 const StyledSkills = styled.div`
@@ -22,8 +23,7 @@ function Skills() {
     return ( 
         <StyledSkills>
             <div className='container'>
-                <span>--skills</span>
-                
+                <Card></Card>
             </div>
         </StyledSkills>
      );
